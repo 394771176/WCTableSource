@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F6E9ECDBB61D105AB9CC64022D4196A /* WCTableSource-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 541BF59B1EACADBB001D31F654048959 /* WCTableSource-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0958363E752FAEB68DF8CCA2EBED9CE1 /* WCTableSource-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 368936EF812E79951FCCFCE7A9AEF87D /* WCTableSource-dummy.m */; };
+		14D017352073E86E6BDEEC3167338899 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		418041AEC023D24160A7E03FA4E50CEB /* Pods-WCTableSource_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BC03A03F7406BD8ADCC5C01457346A /* Pods-WCTableSource_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43BABA1F8D6DB91FCE2F31CDB817CCD9 /* DTTableRow.m in Sources */ = {isa = PBXBuildFile; fileRef = 402074368C77683D87A4269DB2A74F26 /* DTTableRow.m */; };
 		5FFB10130FB226775D791E6C7905D6E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		603A821D24952905006A3E35 /* DTTableRowGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 603A821B24952905006A3E35 /* DTTableRowGroup.h */; };
+		603A821E24952905006A3E35 /* DTTableRowGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 603A821C24952905006A3E35 /* DTTableRowGroup.m */; };
+		61D7A70D9AD05E992B1E4E830FFE1284 /* DTTableSourceUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 555BA1A9A8989C698BEFE78C83F589A6 /* DTTableSourceUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7934242A0F15495CBB4F1324EDDA4093 /* Pods-WCTableSource_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 413379120EECB6D58283A19B15C2D243 /* Pods-WCTableSource_Tests-dummy.m */; };
-		91666B9D9ED61A89947D0674A0EB5C6F /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DFB16F298E6F95CA3F75B0F05DD5EAF /* ReplaceMe.m */; };
-		9ABCF48BE0A0C3BC7C3F7EC65BEC0DCC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		C47DDCCB1E78D9D1F230B2AA78E53B98 /* WCTableSource-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D852C816F37887B4254AEA47922A4A /* WCTableSource-dummy.m */; };
+		83A3F289B953BFCD14DDEADE21477225 /* DTTableSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EE9CA25DA06BBEB7FA493EF05524625 /* DTTableSection.m */; };
+		9C5D7FFEC687049FFEE7FFE4D3D47852 /* DTTableSection.h in Headers */ = {isa = PBXBuildFile; fileRef = A172C40C350BBCC7B5506F267C2B9B70 /* DTTableSection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A0B0DC9ED02A994BCE1977BD1FE74CE8 /* WCTableSource-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CA550954B21A780C43040AD73454DD18 /* WCTableSource-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CA95C42F5A9B44833191CA26025BCEA4 /* DTTableSourceData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F389ADA560E5D59661C3D494A5F14B9 /* DTTableSourceData.m */; };
+		CC04192246627EDB3521C43123E6B7E3 /* DTTableRow.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FC72461517352B9D0FFBBEB74351C18 /* DTTableRow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D706B3F1D82EBA98172BDC6DF8F46529 /* Pods-WCTableSource_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 58DE6DEE05BB18721057C371E64FC780 /* Pods-WCTableSource_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E585DDF9CA3AA89BBBF24B48F5B0CD08 /* DTTableSourceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D91300954A1CCACFEA3AD6A01E4C7E7 /* DTTableSourceUtil.m */; };
 		E7227AF8DCDC2E4FB324C2312CB7E804 /* Pods-WCTableSource_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D270496F961224F2D2EC0F2275265FCC /* Pods-WCTableSource_Example-dummy.m */; };
+		F548A9803C618F4027A626D52D94A717 /* DTTableSourceData.h in Headers */ = {isa = PBXBuildFile; fileRef = E573861CC1DF441E935484792DA48BA1 /* DTTableSourceData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F93882011595CBDDDE0D6D2DE3EEFDB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,41 +46,58 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0745E0ECDEC0A1AAA0EDB38BE2E9CBC5 /* WCTableSource.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WCTableSource.modulemap; sourceTree = "<group>"; };
-		11271A53EA10BD2AC2D18B07EB36E915 /* WCTableSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WCTableSource.framework; path = WCTableSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		09AC7F74DC81149E142D2D5CD63498C9 /* WCTableSource-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WCTableSource-Info.plist"; sourceTree = "<group>"; };
+		0F389ADA560E5D59661C3D494A5F14B9 /* DTTableSourceData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTableSourceData.m; path = WCTableSource/Classes/DTTableSourceData.m; sourceTree = "<group>"; };
+		11271A53EA10BD2AC2D18B07EB36E915 /* WCTableSource.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WCTableSource.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		14FBCE238E9D0AA736840C9D3D699728 /* Pods-WCTableSource_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WCTableSource_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		196A33FE502269E963AAED969A51978D /* WCTableSource-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WCTableSource-prefix.pch"; sourceTree = "<group>"; };
+		217675FAEE9C2B7887A49EE3ACACA012 /* WCTableSource.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WCTableSource.xcconfig; sourceTree = "<group>"; };
 		2D15B785F93483AE587A1BD73D068ABF /* Pods-WCTableSource_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WCTableSource_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2DC9D676D5422EC496E2CB35ABDC83F7 /* Pods-WCTableSource_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WCTableSource_Example.modulemap"; sourceTree = "<group>"; };
-		2DFB16F298E6F95CA3F75B0F05DD5EAF /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = WCTableSource/Classes/ReplaceMe.m; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		368936EF812E79951FCCFCE7A9AEF87D /* WCTableSource-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WCTableSource-dummy.m"; sourceTree = "<group>"; };
+		37BA96BC047B12102201B3B95C3B8C65 /* WCTableSource.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WCTableSource.modulemap; sourceTree = "<group>"; };
+		402074368C77683D87A4269DB2A74F26 /* DTTableRow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTableRow.m; path = WCTableSource/Classes/DTTableRow.m; sourceTree = "<group>"; };
 		413379120EECB6D58283A19B15C2D243 /* Pods-WCTableSource_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WCTableSource_Tests-dummy.m"; sourceTree = "<group>"; };
+		420D5CFA86C4B2B56D7AFB6AD0391B21 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4D91300954A1CCACFEA3AD6A01E4C7E7 /* DTTableSourceUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTableSourceUtil.m; path = WCTableSource/Classes/DTTableSourceUtil.m; sourceTree = "<group>"; };
 		4DC41C5C337CA51B9F2E2D0DEA7E835A /* Pods-WCTableSource_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WCTableSource_Example-frameworks.sh"; sourceTree = "<group>"; };
+		4FC72461517352B9D0FFBBEB74351C18 /* DTTableRow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTableRow.h; path = WCTableSource/Classes/DTTableRow.h; sourceTree = "<group>"; };
 		507098816434B86289E72526932B678D /* Pods-WCTableSource_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WCTableSource_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		541BF59B1EACADBB001D31F654048959 /* WCTableSource-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WCTableSource-umbrella.h"; sourceTree = "<group>"; };
+		555BA1A9A8989C698BEFE78C83F589A6 /* DTTableSourceUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTableSourceUtil.h; path = WCTableSource/Classes/DTTableSourceUtil.h; sourceTree = "<group>"; };
 		58DE6DEE05BB18721057C371E64FC780 /* Pods-WCTableSource_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WCTableSource_Example-umbrella.h"; sourceTree = "<group>"; };
-		5A95338CDF8DF2278E324FDF39371471 /* WCTableSource.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WCTableSource.xcconfig; sourceTree = "<group>"; };
-		64FC01BE77D4E8AA637C5A327E6386F6 /* WCTableSource.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = WCTableSource.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5EE9CA25DA06BBEB7FA493EF05524625 /* DTTableSection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTTableSection.m; path = WCTableSource/Classes/DTTableSection.m; sourceTree = "<group>"; };
+		603A821B24952905006A3E35 /* DTTableRowGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DTTableRowGroup.h; path = WCTableSource/Classes/DTTableRowGroup.h; sourceTree = "<group>"; };
+		603A821C24952905006A3E35 /* DTTableRowGroup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DTTableRowGroup.m; path = WCTableSource/Classes/DTTableRowGroup.m; sourceTree = "<group>"; };
+		690FEED28379EC1893EAF09A80279896 /* WCTableSource-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WCTableSource-prefix.pch"; sourceTree = "<group>"; };
 		744D08E167BFFD980C854E84482109B8 /* Pods-WCTableSource_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WCTableSource_Tests-Info.plist"; sourceTree = "<group>"; };
-		83D852C816F37887B4254AEA47922A4A /* WCTableSource-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WCTableSource-dummy.m"; sourceTree = "<group>"; };
 		84BC03A03F7406BD8ADCC5C01457346A /* Pods-WCTableSource_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WCTableSource_Tests-umbrella.h"; sourceTree = "<group>"; };
 		8AE9F9137E0DAD510793A5E54DBB6B62 /* Pods-WCTableSource_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WCTableSource_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		92DD785488A319F7AA762D2269B11401 /* WCTableSource-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WCTableSource-Info.plist"; sourceTree = "<group>"; };
 		95988863C520796DF7D4BE8D023D99DC /* Pods-WCTableSource_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WCTableSource_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		9BB1ACDDDC23ED6619735336A27D2D42 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A172C40C350BBCC7B5506F267C2B9B70 /* DTTableSection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTableSection.h; path = WCTableSource/Classes/DTTableSection.h; sourceTree = "<group>"; };
 		A8B7F08986F1919A33E1F9D4D9786AC5 /* Pods-WCTableSource_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WCTableSource_Tests.modulemap"; sourceTree = "<group>"; };
 		AE94383D3F9ABF543A15949C669AF9FD /* Pods-WCTableSource_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WCTableSource_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		B4828A0A09C8CD006535B85E1DA47EE8 /* Pods_WCTableSource_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WCTableSource_Example.framework; path = "Pods-WCTableSource_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B93001DCBD36042645F77D90E1AB38D3 /* Pods_WCTableSource_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WCTableSource_Tests.framework; path = "Pods-WCTableSource_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0B9D83B99BAD2ED36597C13CD182A54 /* WCTableSource.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = WCTableSource.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B4828A0A09C8CD006535B85E1DA47EE8 /* Pods_WCTableSource_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WCTableSource_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B93001DCBD36042645F77D90E1AB38D3 /* Pods_WCTableSource_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WCTableSource_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D16E2E773D41DCCE6F4E940151A8CC /* Pods-WCTableSource_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WCTableSource_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C9B6BF2F0996572BE74D7D8B026D197B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		CA550954B21A780C43040AD73454DD18 /* WCTableSource-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WCTableSource-umbrella.h"; sourceTree = "<group>"; };
 		D270496F961224F2D2EC0F2275265FCC /* Pods-WCTableSource_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WCTableSource_Example-dummy.m"; sourceTree = "<group>"; };
-		E7B6DABD60BD684CB808D4F276496038 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		E573861CC1DF441E935484792DA48BA1 /* DTTableSourceData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTableSourceData.h; path = WCTableSource/Classes/DTTableSourceData.h; sourceTree = "<group>"; };
 		E7F19CB17D620357244578D55CEDE29E /* Pods-WCTableSource_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WCTableSource_Example-Info.plist"; sourceTree = "<group>"; };
 		F11AF256008C35E03C3B38132D8AB020 /* Pods-WCTableSource_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WCTableSource_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4653E1F1CD503C60B86D941F0A664BAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14D017352073E86E6BDEEC3167338899 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B35522CC081B36EAC675AEA564C6060F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -88,14 +114,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F0581B9EC35430DA8B47BBF43895DF9F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9ABCF48BE0A0C3BC7C3F7EC65BEC0DCC /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -106,6 +124,40 @@
 				446BAA49D187913A8B3425317037FE7D /* Pods-WCTableSource_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2A8596822ACE9EBB158D746E142E37C6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				37BA96BC047B12102201B3B95C3B8C65 /* WCTableSource.modulemap */,
+				217675FAEE9C2B7887A49EE3ACACA012 /* WCTableSource.xcconfig */,
+				368936EF812E79951FCCFCE7A9AEF87D /* WCTableSource-dummy.m */,
+				09AC7F74DC81149E142D2D5CD63498C9 /* WCTableSource-Info.plist */,
+				690FEED28379EC1893EAF09A80279896 /* WCTableSource-prefix.pch */,
+				CA550954B21A780C43040AD73454DD18 /* WCTableSource-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/WCTableSource";
+			sourceTree = "<group>";
+		};
+		2D989563D2B13D1EABDE4081FD18F7A1 /* WCTableSource */ = {
+			isa = PBXGroup;
+			children = (
+				4FC72461517352B9D0FFBBEB74351C18 /* DTTableRow.h */,
+				402074368C77683D87A4269DB2A74F26 /* DTTableRow.m */,
+				603A821B24952905006A3E35 /* DTTableRowGroup.h */,
+				603A821C24952905006A3E35 /* DTTableRowGroup.m */,
+				A172C40C350BBCC7B5506F267C2B9B70 /* DTTableSection.h */,
+				5EE9CA25DA06BBEB7FA493EF05524625 /* DTTableSection.m */,
+				E573861CC1DF441E935484792DA48BA1 /* DTTableSourceData.h */,
+				0F389ADA560E5D59661C3D494A5F14B9 /* DTTableSourceData.m */,
+				555BA1A9A8989C698BEFE78C83F589A6 /* DTTableSourceUtil.h */,
+				4D91300954A1CCACFEA3AD6A01E4C7E7 /* DTTableSourceUtil.m */,
+				7C3D9925DDC8BAD151FB356CC56A02FE /* Pod */,
+				2A8596822ACE9EBB158D746E142E37C6 /* Support Files */,
+			);
+			name = WCTableSource;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		446BAA49D187913A8B3425317037FE7D /* Pods-WCTableSource_Tests */ = {
@@ -124,29 +176,22 @@
 			path = "Target Support Files/Pods-WCTableSource_Tests";
 			sourceTree = "<group>";
 		};
-		4DCD613F24092AC14D3E8B2BB518C446 /* Support Files */ = {
+		4FD85449D34A99A2EA08E76F7D59BABB /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0745E0ECDEC0A1AAA0EDB38BE2E9CBC5 /* WCTableSource.modulemap */,
-				5A95338CDF8DF2278E324FDF39371471 /* WCTableSource.xcconfig */,
-				83D852C816F37887B4254AEA47922A4A /* WCTableSource-dummy.m */,
-				92DD785488A319F7AA762D2269B11401 /* WCTableSource-Info.plist */,
-				196A33FE502269E963AAED969A51978D /* WCTableSource-prefix.pch */,
-				541BF59B1EACADBB001D31F654048959 /* WCTableSource-umbrella.h */,
+				2D989563D2B13D1EABDE4081FD18F7A1 /* WCTableSource */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/WCTableSource";
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		8027B3DA7C231086ED395C5973EC009E /* WCTableSource */ = {
+		7C3D9925DDC8BAD151FB356CC56A02FE /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				2DFB16F298E6F95CA3F75B0F05DD5EAF /* ReplaceMe.m */,
-				F82269F8DAB2DEA853A35FF887412782 /* Pod */,
-				4DCD613F24092AC14D3E8B2BB518C446 /* Support Files */,
+				C9B6BF2F0996572BE74D7D8B026D197B /* LICENSE */,
+				420D5CFA86C4B2B56D7AFB6AD0391B21 /* README.md */,
+				B0B9D83B99BAD2ED36597C13CD182A54 /* WCTableSource.podspec */,
 			);
-			name = WCTableSource;
-			path = ../..;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
@@ -178,7 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				EF64F962537A968569B0DF5AA7601E54 /* Development Pods */,
+				4FD85449D34A99A2EA08E76F7D59BABB /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				EE4D01FCD64D3179CD2739CA5581930D /* Products */,
 				0D4CA08CA1BB1197E27C316960918757 /* Targets Support Files */,
@@ -203,35 +248,9 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EF64F962537A968569B0DF5AA7601E54 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8027B3DA7C231086ED395C5973EC009E /* WCTableSource */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		F82269F8DAB2DEA853A35FF887412782 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				9BB1ACDDDC23ED6619735336A27D2D42 /* LICENSE */,
-				E7B6DABD60BD684CB808D4F276496038 /* README.md */,
-				64FC01BE77D4E8AA637C5A327E6386F6 /* WCTableSource.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		107D438E25D4D67D8BD5343CA1CBF41F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1F6E9ECDBB61D105AB9CC64022D4196A /* WCTableSource-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4E68E6CBFA7447E1319BF3BA9147B558 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -245,6 +264,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				D706B3F1D82EBA98172BDC6DF8F46529 /* Pods-WCTableSource_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E75EC0B3CB046D7FB38464C87CFB5758 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC04192246627EDB3521C43123E6B7E3 /* DTTableRow.h in Headers */,
+				9C5D7FFEC687049FFEE7FFE4D3D47852 /* DTTableSection.h in Headers */,
+				F548A9803C618F4027A626D52D94A717 /* DTTableSourceData.h in Headers */,
+				61D7A70D9AD05E992B1E4E830FFE1284 /* DTTableSourceUtil.h in Headers */,
+				603A821D24952905006A3E35 /* DTTableRowGroup.h in Headers */,
+				A0B0DC9ED02A994BCE1977BD1FE74CE8 /* WCTableSource-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,12 +304,12 @@
 		};
 		C78B649EF4BB98FD3058627045329648 /* WCTableSource */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 65247DE8BC0AF63D89E1BD6885BD658D /* Build configuration list for PBXNativeTarget "WCTableSource" */;
+			buildConfigurationList = C1C6F043520F4D86657306972FB5E45B /* Build configuration list for PBXNativeTarget "WCTableSource" */;
 			buildPhases = (
-				107D438E25D4D67D8BD5343CA1CBF41F /* Headers */,
-				464125906A5E6BA70EADC564D572B6F3 /* Sources */,
-				F0581B9EC35430DA8B47BBF43895DF9F /* Frameworks */,
-				C7704D65431499FB24A62F8E524AFC4D /* Resources */,
+				E75EC0B3CB046D7FB38464C87CFB5758 /* Headers */,
+				84859D751CAD428AFF215E75CF377B67 /* Sources */,
+				4653E1F1CD503C60B86D941F0A664BAC /* Frameworks */,
+				889E00B993DD000830943EC4D4A3B7ED /* Resources */,
 			);
 			buildRules = (
 			);
@@ -343,14 +375,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A1B3EB120965A3FB281CDF600EF3297F /* Resources */ = {
+		889E00B993DD000830943EC4D4A3B7ED /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C7704D65431499FB24A62F8E524AFC4D /* Resources */ = {
+		A1B3EB120965A3FB281CDF600EF3297F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -368,20 +400,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		464125906A5E6BA70EADC564D572B6F3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				91666B9D9ED61A89947D0674A0EB5C6F /* ReplaceMe.m in Sources */,
-				C47DDCCB1E78D9D1F230B2AA78E53B98 /* WCTableSource-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7B59226053C6666A4710F9A915238DC4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E7227AF8DCDC2E4FB324C2312CB7E804 /* Pods-WCTableSource_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84859D751CAD428AFF215E75CF377B67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43BABA1F8D6DB91FCE2F31CDB817CCD9 /* DTTableRow.m in Sources */,
+				603A821E24952905006A3E35 /* DTTableRowGroup.m in Sources */,
+				83A3F289B953BFCD14DDEADE21477225 /* DTTableSection.m in Sources */,
+				CA95C42F5A9B44833191CA26025BCEA4 /* DTTableSourceData.m in Sources */,
+				E585DDF9CA3AA89BBBF24B48F5B0CD08 /* DTTableSourceUtil.m in Sources */,
+				0958363E752FAEB68DF8CCA2EBED9CE1 /* WCTableSource-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,9 +439,9 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		415404B1643C358911D9E09B6E09EDE7 /* Release */ = {
+		40546865DC81B78549BEC311290BCB3F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A95338CDF8DF2278E324FDF39371471 /* WCTableSource.xcconfig */;
+			baseConfigurationReference = 217675FAEE9C2B7887A49EE3ACACA012 /* WCTableSource.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -521,43 +557,11 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
-		};
-		54F64FE1F4CBB402AA6CE96DB8F11B8C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A95338CDF8DF2278E324FDF39371471 /* WCTableSource.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/WCTableSource/WCTableSource-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/WCTableSource/WCTableSource-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/WCTableSource/WCTableSource.modulemap";
-				PRODUCT_MODULE_NAME = WCTableSource;
-				PRODUCT_NAME = WCTableSource;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		7079D80DB546B0EBE6AA92247FA91965 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -654,6 +658,37 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		A74CB532EF536967AB0DDE6C14766052 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 217675FAEE9C2B7887A49EE3ACACA012 /* WCTableSource.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WCTableSource/WCTableSource-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WCTableSource/WCTableSource-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/WCTableSource/WCTableSource.modulemap";
+				PRODUCT_MODULE_NAME = WCTableSource;
+				PRODUCT_NAME = WCTableSource;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -754,11 +789,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		65247DE8BC0AF63D89E1BD6885BD658D /* Build configuration list for PBXNativeTarget "WCTableSource" */ = {
+		C1C6F043520F4D86657306972FB5E45B /* Build configuration list for PBXNativeTarget "WCTableSource" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				54F64FE1F4CBB402AA6CE96DB8F11B8C /* Debug */,
-				415404B1643C358911D9E09B6E09EDE7 /* Release */,
+				A74CB532EF536967AB0DDE6C14766052 /* Debug */,
+				40546865DC81B78549BEC311290BCB3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -10,6 +10,10 @@
 #endif
 #endif
 
+#import "DTTableRow.h"
+#import "DTTableSection.h"
+#import "DTTableSourceData.h"
+#import "DTTableSourceUtil.h"
 
 FOUNDATION_EXPORT double WCTableSourceVersionNumber;
 FOUNDATION_EXPORT const unsigned char WCTableSourceVersionString[];
