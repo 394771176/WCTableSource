@@ -1,0 +1,6 @@
+framework module Pods_WCTableSource_Tests {
+  umbrella header "Pods-WCTableSource_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,16 @@
+PODS:
+  - WCTableSource (0.1.0)
+
+DEPENDENCIES:
+  - WCTableSource (from `../`)
+
+EXTERNAL SOURCES:
+  WCTableSource:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  WCTableSource: 38cd1691973c574def7b9202f5d1c9af84c54156
+
+PODFILE CHECKSUM: f3d71e131500c3d57091f7f68ace9ff3abbc79f4
+
+COCOAPODS: 1.7.5

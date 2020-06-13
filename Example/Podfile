@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'WCTableSource_Example' do
+  pod 'WCTableSource', :path => '../'
+
+  target 'WCTableSource_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

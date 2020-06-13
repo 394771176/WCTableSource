@@ -1,0 +1,6 @@
+framework module WCTableSource {
+  umbrella header "WCTableSource-umbrella.h"
+
+  export *
+  module * { export * }
+}

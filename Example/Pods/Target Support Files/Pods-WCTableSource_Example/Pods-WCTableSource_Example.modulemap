@@ -1,0 +1,6 @@
+framework module Pods_WCTableSource_Example {
+  umbrella header "Pods-WCTableSource_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
