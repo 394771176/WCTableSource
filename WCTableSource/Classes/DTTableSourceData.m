@@ -88,6 +88,20 @@
     return section;
 }
 
+- (DTTableSection *)addToLastSectionWithRowGroup:(DTTableRowGroup *)rowGroup
+{
+    DTTableSection *section = [self lastSection];
+    [section addRowGroup:rowGroup];
+    return section;
+}
+
+- (DTTableSection *)addToNewSectionWithRowGroup:(DTTableRowGroup *)rowGroup
+{
+    DTTableSection *section = [DTTableSection new];
+    [section addRowGroup:rowGroup];
+    return section;
+}
+
 - (DTTableSection *)addToLastSectionWithRowList:(NSArray<DTTableRow *> *)rowList
 {
     DTTableSection *section = [self lastSection];
@@ -107,64 +121,59 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     if (self.countBlock) {
-        return self.countBlock(tableView);
+        NSInteger count = self.countBlock(tableView);
+        return MIN(count, self.dataSource.count);
+    } else {
+        return self.dataSource.count;
     }
-    return self.dataSource.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    DTTableSection *sectionItem = [self sectionForIndex:section];
+    return [sectionItem tableView:tableView numberOfRowsInSection:section];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    if (_heightBlock) {
-//        return _heightBlock(self, indexPath);
-//    } else if (_height > 0) {
-//        return _height;
-//    } else {
-//        Class cla = [self cellClassForIndexPath:indexPath];
-//        if (cla && [cla respondsToSelector:@selector(cellHeightWithItem:tableView:)]) {
-//            return [cla cellHeightWithItem:self.data tableView:tableView];
-//        }
-//    }
-    return 0;
+    DTTableSection *sectionItem = [self sectionForIndex:indexPath.section];
+    return [sectionItem tableView:tableView heightForRowAtIndexPath:indexPath];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    UITableViewCell *cell = [self cellForIndexPath:indexPath];
-//    if (!cell && _cellClass) {
-//        if (!self.reuseCellId) {
-//            self.reuseCellId = NSStringFromClass([self.cellClass class]);
-//        }
-//        cell = [tableView dequeueReusableCellWithIdentifier:self.reuseCellId];
-//        if (!cell) {
-//            cell = [(UITableViewCell *)[_cellClass alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:self.reuseCellId];
-//        }
-//    }
-//
-//    if (cell) {
-//        if (_configBlock) {
-//            _configBlock(self, cell, indexPath);
-//        }
-//        if ([cell respondsToSelector:@selector(setItem:)]) {
-//            //只是借助DTTableRow为替身，方便调setItem方法，而没有警告
-//            [(DTTableRow *)cell setItem:self.data];
-//        }
-//        if ([cell respondsToSelector:@selector(setUserInfo:)]) {
-//            [(DTTableRow *)cell setUserInfo:self.userInfo];
-//        }
-//    }
-    return nil;
+    DTTableSection *sectionItem = [self sectionForIndex:indexPath.section];
+    return [sectionItem tableView:tableView cellForRowAtIndexPath:indexPath];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    if (self.clickBlock) {
-//        self.clickBlock(self, indexPath);
-//    }
+    DTTableSection *sectionItem = [self sectionForIndex:indexPath.section];
+    return [sectionItem tableView:tableView didSelectRowAtIndexPath:indexPath];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    DTTableSection *sectionItem = [self sectionForIndex:section];
+    return [sectionItem tableView:tableView heightForHeaderInSection:section];
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    DTTableSection *sectionItem = [self sectionForIndex:section];
+    return [sectionItem tableView:tableView viewForHeaderInSection:section];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    DTTableSection *sectionItem = [self sectionForIndex:section];
+    return [sectionItem tableView:tableView heightForFooterInSection:section];
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    DTTableSection *sectionItem = [self sectionForIndex:section];
+    return [sectionItem tableView:tableView viewForFooterInSection:section];
 }
 
 @end

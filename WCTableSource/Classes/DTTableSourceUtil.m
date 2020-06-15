@@ -272,3 +272,6 @@
 
 @end
 
+@implementation DTTableSourceData (Util)
+
+@end

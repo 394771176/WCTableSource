@@ -58,7 +58,11 @@
 - (void)addRow:(DTTableRow *)row
 {
     if (row) {
-        [self.rowList addObject:row];
+        if ([row isKindOfClass:DTTableRowGroup.class]) {
+            [self addRowGroup:(id)row];
+        } else {
+            [self.rowList addObject:row];
+        }
     }
 }
 
@@ -83,11 +87,88 @@
 {
     if (row) {
         if (index >= 0 && index < self.rowList.count) {
-            [self.rowList insertObject:row atIndex:index];
+            if ([row isKindOfClass:DTTableRowGroup.class]) {
+                NSArray<DTTableRow *> *array = [(DTTableRowGroup *)row rowList];
+                [array enumerateObjectsUsingBlock:^(DTTableRow * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                    [self.rowList insertObject:obj atIndex:index+idx];
+                }];
+            } else {
+                [self.rowList insertObject:row atIndex:index];
+            }
         } else {
             [self addRow:row];
         }
     }
+}
+
+// MARK: - UITableViewDelegate -
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    if (self.countBlock) {
+        NSInteger count = self.countBlock(section);
+        return MIN(count, self.rowList.count);
+    } else {
+        return self.rowList.count;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DTTableRow *row = [self rowForIndexPath:indexPath];
+    return [row tableView:tableView heightForRowAtIndexPath:indexPath];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DTTableRow *row = [self rowForIndexPath:indexPath];
+    return [row tableView:tableView cellForRowAtIndexPath:indexPath];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DTTableRow *row = [self rowForIndexPath:indexPath];
+    [row tableView:tableView didSelectRowAtIndexPath:indexPath];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return self.headerHeight;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    if (self.headerHeight > 0) {
+        if (self.headerBlock) {
+            return self.headerBlock(section);
+        } else {
+            return [self.class tableView:tableView headerFooterViewWithHeight:self.headerHeight];
+        }
+    }
+    return nil;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    return self.footerHeight;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    if (self.footerHeight > 0) {
+        if (self.footerBlock) {
+            return self.footerBlock(section);
+        } else {
+            return [self.class tableView:tableView headerFooterViewWithHeight:self.footerHeight];
+        }
+    }
+    return nil;
+}
+
++ (UIView *)tableView:(UITableView *)tableView headerFooterViewWithHeight:(CGFloat)height
+{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, height)];
+    view.backgroundColor = [UIColor clearColor];
+    return view;
 }
 
 @end

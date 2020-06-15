@@ -13,12 +13,12 @@
 typedef NSInteger (^SectionRowCount)(NSInteger section);
 typedef UIView * (^SectionHeaderFooter)(NSInteger section);
 
-@interface DTTableSection : DTTableRow
+@interface DTTableSection : NSObject<UITableViewDelegate, UITableViewDataSource>
 
 //row列表
 @property (nonatomic, strong) NSMutableArray<DTTableRow *> *rowList;
 
-//默认count = rowlist.count,但是有时可能有其他条件，需要自定义count
+//默认count = rowlist.count,但是有时可能有其他条件，需要自定义count， 但count 不得超过rowList.count
 @property (nonatomic, strong) SectionRowCount countBlock;
 
 // section header height

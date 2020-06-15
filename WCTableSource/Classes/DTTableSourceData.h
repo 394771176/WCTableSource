@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "DTTableSection.h"
 #import "DTTableRow.h"
+#import "DTTableRowGroup.h"
 
 typedef NSInteger (^SectionCount)(UITableView *tableView);
 
@@ -16,6 +17,7 @@ typedef NSInteger (^SectionCount)(UITableView *tableView);
 
 @property (nonatomic, strong, readonly) NSMutableArray<DTTableSection *> *dataSource;
 
+//默认count = dataSource.count,但是有时可能有其他条件，需要自定义count， 但count 不得超过dataSource.count
 @property (nonatomic, strong) SectionCount countBlock;
 
 - (DTTableSection *)lastSection;

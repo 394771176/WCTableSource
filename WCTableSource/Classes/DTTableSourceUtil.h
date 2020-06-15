@@ -35,6 +35,7 @@
 
 - (DTTableRow * (^)(CellClick clickBlock))withCellClickBlock;
 
+//以下方法会转为section,建议row配置完成后才调用
 - (DTTableSection * (^)(DTTableSection *sectionItem))addToSection;
 - (DTTableSection * (^)(DTTableSection *sectionItem, NSInteger index))insertToSection;
 
@@ -64,12 +65,16 @@
 - (DTTableSection * (^)(SectionHeaderFooter headerBlock))withHeaderBlock;
 - (DTTableSection * (^)(SectionHeaderFooter footerBlock))withFooterBlock;
 
-
 - (DTTableSection * (^)(DTTableRow *rowItem))withAddRow;
 - (DTTableSection * (^)(NSArray<DTTableRow *> *rowList))withAddRowList;
 - (DTTableSection * (^)(DTTableRow *rowItem, NSInteger index))withInsertRow;
 
 - (DTTableSection * (^)(DTTableSourceData *sourceItem))addToSource;
 - (DTTableSection * (^)(DTTableSourceData *sourceItem, NSInteger index))insertToSource;
+
+@end
+
+
+@interface DTTableSourceData (Util)
 
 @end
