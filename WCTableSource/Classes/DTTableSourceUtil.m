@@ -14,6 +14,13 @@
 
 @implementation DTTableRow (Util)
 
++ (DTTableRow * (^)(void))row
+{
+    return ^(){
+        return [self new];
+    };
+}
+
 - (DTTableRow * (^)(NSString *cellId))withReuseCellId
 {
     return ^(NSString *cellId) {
@@ -70,7 +77,7 @@
     };
 }
 
-- (DTTableRow * (^)(CGFloat height))withCellHeight
+- (DTTableRow * (^)(CGFloat height))withHeight
 {
     return ^(CGFloat height) {
         self.height = height;
@@ -78,7 +85,7 @@
     };
 }
 
-- (DTTableRow * (^)(CellHeight heightBlock))withCellHeightBlock
+- (DTTableRow * (^)(CellHeight heightBlock))withHeightBlock
 {
     return ^(CellHeight heightBlock) {
         self.heightBlock = heightBlock;
@@ -86,7 +93,15 @@
     };
 }
 
-- (DTTableRow * (^)(CellConfig configBlock))withCellConfigBlock
+- (DTTableRow * (^)(CellConfig initBlock))withInitBlock
+{
+    return ^(CellConfig initBlock) {
+        self.initBlock = initBlock;
+        return self;
+    };
+}
+
+- (DTTableRow * (^)(CellConfig configBlock))withConfigBlock
 {
     return ^(CellConfig configBlock) {
         self.configBlock = configBlock;
@@ -94,7 +109,7 @@
     };
 }
 
-- (DTTableRow * (^)(CellClick clickBlock))withCellClickBlock
+- (DTTableRow * (^)(CellClick clickBlock))withClickBlock
 {
     return ^(CellClick clickBlock) {
         self.clickBlock = clickBlock;
@@ -136,6 +151,13 @@
 
 
 @implementation DTTableRowGroup (Util)
+
++ (DTTableRowGroup * (^)(void))group
+{
+    return ^(){
+        return [self new];
+    };
+}
 
 - (DTTableRowGroup * (^)(NSArray *dataList))withDataList
 {
@@ -189,6 +211,13 @@
 @end
 
 @implementation DTTableSection (Util)
+
++ (DTTableSection * (^)(void))section
+{
+    return ^(){
+        return [self new];
+    };
+}
 
 - (DTTableSection * (^)(SectionRowCount countBlock))withCountBlock
 {
@@ -275,3 +304,4 @@
 @implementation DTTableSourceData (Util)
 
 @end
+

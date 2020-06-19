@@ -20,6 +20,11 @@
     return _dataSource;
 }
 
+- (void)clearDataSource
+{
+    [self.dataSource removeAllObjects];
+}
+
 - (DTTableSection *)lastSection
 {
     if (self.dataSource.count) {
