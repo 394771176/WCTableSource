@@ -18,8 +18,6 @@
 
 @interface DTTableRow (Util)
 
-+ (DTTableRow * (^)(void))row;
-
 - (DTTableRow * (^)(NSString *cellId))withReuseCellId;
 
 - (DTTableRow * (^)(id data))withData;
@@ -29,6 +27,7 @@
 - (DTTableRow * (^)(UITableViewCell *cell))withCell;
 - (DTTableRow * (^)(Class cla))withCellClass;
 - (DTTableRow * (^)(CellItem cellBlock))withCellBlock;
+- (DTTableRow * (^)(BOOL isXib))withIsXib;
 
 - (DTTableRow * (^)(CGFloat height))withHeight;
 - (DTTableRow * (^)(CellHeight heightBlock))withHeightBlock;
@@ -37,6 +36,15 @@
 - (DTTableRow * (^)(CellConfig configBlock))withConfigBlock;
 
 - (DTTableRow * (^)(CellClick clickBlock))withClickBlock;
+
+- (DTTableRow * (^)(SEL method))withDataMethod;
+- (DTTableRow * (^)(BOOL autoSet))withAutoSetItem;
+
+//因为链式编程，不要有参数提示，block形式的参数不便于使用，改成oc方法并返回自身
+- (DTTableRow *)withSetInitBlock:(CellConfig)initBlock;
+- (DTTableRow *)withSetConfigBlock:(CellConfig)configBlock;
+- (DTTableRow *)withSetHeightBlock:(CellHeight)heightBlock;
+- (DTTableRow *)withSetClickBlock:(CellClick)clickBlock;
 
 //以下方法会转为section,建议row配置完成后才调用
 - (DTTableSection * (^)(DTTableSection *sectionItem))addToSection;
@@ -49,8 +57,6 @@
 
 @interface DTTableRowGroup (Util)
 
-+ (DTTableRowGroup * (^)(void))group;
-
 - (DTTableRowGroup * (^)(NSArray *dataList))withDataList;
 - (DTTableRowGroup * (^)(NSArray *cellList))withCellList;
 - (DTTableRowGroup * (^)(NSArray *heightList))withHeightList;
@@ -62,8 +68,6 @@
 
 //- (DTTableSection * (^)(id data))withData;
 //- (DTTableSection * (^)(NSArray *dataList))withDataList;
-
-+ (DTTableSection * (^)(void))section;
 
 - (DTTableSection * (^)(SectionRowCount countBlock))withCountBlock;
 

@@ -31,6 +31,8 @@ typedef UIView * (^SectionHeaderFooter)(NSInteger section);
 // section footer view
 @property (nonatomic, strong) SectionHeaderFooter footerBlock;
 
++ (DTTableSection *)section;
+
 - (DTTableRow *)lastRow;
 - (DTTableRow *)rowForIndex:(NSInteger)index;
 - (DTTableRow *)rowForIndexPath:(NSIndexPath *)indexPath;

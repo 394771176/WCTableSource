@@ -16,6 +16,8 @@
 
 @property (nonatomic, strong) NSArray *heightList;
 
++ (DTTableRowGroup *)group;
+
 - (NSArray<DTTableRow *> *)rowList;
 
 @end

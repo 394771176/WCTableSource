@@ -34,6 +34,17 @@
     }
 }
 
+- (DTTableSection *)theLastSection
+{
+    if (self.dataSource.count) {
+        return [self.dataSource lastObject];
+    } else {
+        DTTableSection *section = [DTTableSection new];
+        [self addSection:section];
+        return section;
+    }
+}
+
 - (DTTableSection *)sectionForIndex:(NSInteger)index
 {
     if (index >= 0 && index < self.dataSource.count) {
@@ -81,7 +92,7 @@
 
 - (DTTableSection *)addToLastSectionWithRow:(DTTableRow *)rowItem
 {
-    DTTableSection *section = [self lastSection];
+    DTTableSection *section = [self theLastSection];
     [section addRow:rowItem];
     return section;
 }
@@ -89,13 +100,14 @@
 - (DTTableSection *)addToNewSectionWithRow:(DTTableRow *)rowItem
 {
     DTTableSection *section = [DTTableSection new];
+    [self addSection:section];
     [section addRow:rowItem];
     return section;
 }
 
 - (DTTableSection *)addToLastSectionWithRowGroup:(DTTableRowGroup *)rowGroup
 {
-    DTTableSection *section = [self lastSection];
+    DTTableSection *section = [self theLastSection];
     [section addRowGroup:rowGroup];
     return section;
 }
@@ -109,7 +121,7 @@
 
 - (DTTableSection *)addToLastSectionWithRowList:(NSArray<DTTableRow *> *)rowList
 {
-    DTTableSection *section = [self lastSection];
+    DTTableSection *section = [self theLastSection];
     [section addRowList:rowList];
     return section;
 }
@@ -148,13 +160,18 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DTTableSection *sectionItem = [self sectionForIndex:indexPath.section];
-    return [sectionItem tableView:tableView cellForRowAtIndexPath:indexPath];
+    UITableViewCell *cell = [sectionItem tableView:tableView cellForRowAtIndexPath:indexPath];
+    if (cell) {
+        return cell;
+    } else {
+        return [UITableViewCell new];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DTTableSection *sectionItem = [self sectionForIndex:indexPath.section];
-    return [sectionItem tableView:tableView didSelectRowAtIndexPath:indexPath];
+    [sectionItem tableView:tableView didSelectRowAtIndexPath:indexPath];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section

@@ -9,18 +9,26 @@
 
 @implementation DTTableRowGroup
 
++ (DTTableRowGroup *)group
+{
+    return [self new];
+}
+
 - (DTTableRow *)getRowWithIndex:(NSInteger)index
 {
     DTTableRow *row = [DTTableRow new];
     row.reuseCellId = self.reuseCellId;
     row.cellClass = self.cellClass;
     row.cellBlock = self.cellBlock;
+    row.isXibCell = self.isXibCell;
     row.actionType = self.actionType;
     row.userInfo = self.userInfo;
     row.heightBlock = self.heightBlock;
     row.initBlock = self.initBlock;
     row.configBlock = self.configBlock;
     row.clickBlock = self.clickBlock;
+    row.dataMethod = self.dataMethod;
+    row.autoSetItem = self.autoSetItem;
     
     row.cell = [self cellWithIndex:index];
     row.data = [self dataWithIndex:index];

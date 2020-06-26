@@ -13,8 +13,8 @@
 
 typedef CGFloat (^CellHeight)(DTTableRow *rowItem, NSIndexPath *indexPath);
 typedef UITableViewCell * (^CellItem)(DTTableRow *rowItem, NSIndexPath *indexPath);
-typedef void (^CellConfig)(DTTableRow *rowItem, UITableViewCell *cell, NSIndexPath *indexPath);
-typedef void (^CellClick)(DTTableRow *rowItem, UITableViewCell *cell, NSIndexPath *indexPath);
+typedef void (^CellConfig)(DTTableRow *rowItem, id cell, NSIndexPath *indexPath);
+typedef void (^CellClick)(DTTableRow *rowItem, id cell, NSIndexPath *indexPath);
 
 @interface DTTableRow : NSObject<UITableViewDelegate, UITableViewDataSource>
 
@@ -25,6 +25,8 @@ typedef void (^CellClick)(DTTableRow *rowItem, UITableViewCell *cell, NSIndexPat
 @property (nonatomic, strong) UITableViewCell   *cell;
 @property (nonatomic, strong) Class             cellClass;
 @property (nonatomic, strong) CellItem          cellBlock;
+//是否xib cell
+@property (nonatomic, assign) BOOL isXibCell;
 
 //cell 数据
 @property (nonatomic, strong) id data;
@@ -43,9 +45,16 @@ typedef void (^CellClick)(DTTableRow *rowItem, UITableViewCell *cell, NSIndexPat
 //cell 配置，复用时都会调用
 @property (nonatomic, strong) CellConfig    configBlock;
 
+//cell data传递, 必须是支持一个参数的方法，参数为data, 如果nil = setItem:
+@property (nonatomic, assign) SEL dataMethod;
+//是否自动默认的数据赋值方法setItem:,默认yes
+@property (nonatomic, assign) BOOL autoSetItem;
+
 //cell 点击
 @property (nonatomic, strong) CellClick     clickBlock;
 
 @property (nonatomic, weak, readonly) UITableViewCell *currentCell;
+
++ (DTTableRow *)row;
 
 @end
