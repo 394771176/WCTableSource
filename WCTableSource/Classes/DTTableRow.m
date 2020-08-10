@@ -101,17 +101,11 @@
             }
         }
     }
-    if (cell) {
-        _currentCell = cell;
-        _indexPath = indexPath;
-    }
     return cell;
 }
 
-- (void)didConfigCell
+- (void)configCell:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = _currentCell;
-    NSIndexPath *indexPath = _indexPath;
     if (cell) {
         if (self.configBlock) {
             self.configBlock(self, cell, indexPath);

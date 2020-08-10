@@ -46,13 +46,11 @@
 
 - (DTTableSection *)theLastSection
 {
-    if (self.dataSource.count) {
-        return [self.dataSource lastObject];
-    } else {
-        DTTableSection *section = [DTTableSection new];
-        [self addSection:section];
-        return section;
+    DTTableSection *section = [self lastSection];
+    if (!section) {
+        section = [self addNewSection];
     }
+    return section;
 }
 
 - (DTTableSection *)sectionForIndex:(NSInteger)index
@@ -62,6 +60,11 @@
     } else {
         return nil;
     }
+}
+
+- (DTTableRow *)lastRow
+{
+    return [[self lastSection] lastRow];
 }
 
 - (DTTableRow *)rowForIndexPath:(NSIndexPath *)indexPath
@@ -175,7 +178,7 @@
         if ([_notSetItemClassList containsObject:NSStringFromClass(cell.class)]) {
             row.autoSetItem = NO;
         }
-        [row didConfigCell];
+        [row configCell:cell indexPath:indexPath];
         return cell;
     } else {
         return [UITableViewCell new];

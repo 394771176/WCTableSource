@@ -28,6 +28,8 @@ typedef NSInteger (^SectionCount)(UITableView *tableView);
 
 - (DTTableSection *)lastSection;
 - (DTTableSection *)sectionForIndex:(NSInteger)index;
+
+- (DTTableRow *)lastRow;
 - (DTTableRow *)rowForIndexPath:(NSIndexPath *)indexPath;
 
 - (DTTableSection *)addNewSection;
