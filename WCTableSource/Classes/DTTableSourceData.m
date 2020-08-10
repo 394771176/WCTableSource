@@ -25,6 +25,16 @@
     [self.dataSource removeAllObjects];
 }
 
+- (void)addNotSetItemClass:(Class)cla
+{
+    if (cla) {
+        if (!self.notSetItemClassList) {
+            self.notSetItemClassList = [NSMutableArray array];
+        }
+        [self.notSetItemClassList addObject:NSStringFromClass(cla)];
+    }
+}
+
 - (DTTableSection *)lastSection
 {
     if (self.dataSource.count) {
@@ -147,8 +157,17 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DTTableSection *sectionItem = [self sectionForIndex:indexPath.section];
-    return [sectionItem tableView:tableView cellForRowAtIndexPath:indexPath];
+    DTTableRow *row = [self rowForIndexPath:indexPath];
+    UITableViewCell *cell = [row tableView:tableView cellForRowAtIndexPath:indexPath];
+    if (cell) {
+        if ([_notSetItemClassList containsObject:NSStringFromClass(cell.class)]) {
+            row.
+        }
+        [row didConfigCell];
+        return cell;
+    } else {
+        return [UITableViewCell new];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

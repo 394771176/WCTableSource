@@ -18,8 +18,6 @@
 
 @interface DTTableRow (Util)
 
-+ (DTTableRow * (^)(void))row;
-
 - (DTTableRow * (^)(NSString *cellId))withReuseCellId;
 
 - (DTTableRow * (^)(id data))withData;
@@ -28,15 +26,8 @@
 
 - (DTTableRow * (^)(UITableViewCell *cell))withCell;
 - (DTTableRow * (^)(Class cla))withCellClass;
-- (DTTableRow * (^)(CellItem cellBlock))withCellBlock;
 
 - (DTTableRow * (^)(CGFloat height))withHeight;
-- (DTTableRow * (^)(CellHeight heightBlock))withHeightBlock;
-
-- (DTTableRow * (^)(CellConfig configBlock))withInitBlock;
-- (DTTableRow * (^)(CellConfig configBlock))withConfigBlock;
-
-- (DTTableRow * (^)(CellClick clickBlock))withClickBlock;
 
 //以下方法会转为section,建议row配置完成后才调用
 - (DTTableSection * (^)(DTTableSection *sectionItem))addToSection;
@@ -49,8 +40,6 @@
 
 @interface DTTableRowGroup (Util)
 
-+ (DTTableRowGroup * (^)(void))group;
-
 - (DTTableRowGroup * (^)(NSArray *dataList))withDataList;
 - (DTTableRowGroup * (^)(NSArray *cellList))withCellList;
 - (DTTableRowGroup * (^)(NSArray *heightList))withHeightList;
@@ -60,17 +49,8 @@
 
 @interface DTTableSection (Util)
 
-//- (DTTableSection * (^)(id data))withData;
-//- (DTTableSection * (^)(NSArray *dataList))withDataList;
-
-+ (DTTableSection * (^)(void))section;
-
-- (DTTableSection * (^)(SectionRowCount countBlock))withCountBlock;
-
 - (DTTableSection * (^)(CGFloat height))withHeaderHeight;
 - (DTTableSection * (^)(CGFloat height))withFooterHeight;
-- (DTTableSection * (^)(SectionHeaderFooter headerBlock))withHeaderBlock;
-- (DTTableSection * (^)(SectionHeaderFooter footerBlock))withFooterBlock;
 
 - (DTTableSection * (^)(DTTableRow *rowItem))withAddRow;
 - (DTTableSection * (^)(NSArray<DTTableRow *> *rowList))withAddRowList;

@@ -47,5 +47,10 @@ typedef void (^CellClick)(DTTableRow *rowItem, UITableViewCell *cell, NSIndexPat
 @property (nonatomic, strong) CellClick     clickBlock;
 
 @property (nonatomic, weak, readonly) UITableViewCell *currentCell;
+@property (nonatomic, weak, readonly) NSIndexPath *indexPath;
+
++ (DTTableRow *)row;
+
+- (void)didConfigCell;
 
 @end

@@ -81,7 +81,17 @@
             }
         }
     }
-    
+    if (cell) {
+        _currentCell = cell;
+        _indexPath = indexPath;
+    }
+    return cell;
+}
+
+- (void)didConfigCell
+{
+    UITableViewCell *cell = _currentCell;
+    NSIndexPath *indexPath = _indexPath;
     if (cell) {
         if (self.configBlock) {
             self.configBlock(self, cell, indexPath);
@@ -93,9 +103,7 @@
         if ([cell respondsToSelector:@selector(setUserInfo:)]) {
             [(DTTableRow *)cell setUserInfo:self.userInfo];
         }
-        _currentCell = cell;
     }
-    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

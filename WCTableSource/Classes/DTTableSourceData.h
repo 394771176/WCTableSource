@@ -20,7 +20,11 @@ typedef NSInteger (^SectionCount)(UITableView *tableView);
 //默认count = dataSource.count,但是有时可能有其他条件，需要自定义count， 但count 不得超过dataSource.count
 @property (nonatomic, strong) SectionCount countBlock;
 
+@property (nonatomic, strong) NSMutableArray *notSetItemClassList;
+
 - (void)clearDataSource;
+
+- (void)addNotSetItemClass:(Class)cla;
 
 - (DTTableSection *)lastSection;
 - (DTTableSection *)sectionForIndex:(NSInteger)index;
