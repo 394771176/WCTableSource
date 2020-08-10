@@ -27,7 +27,12 @@
 - (DTTableRow * (^)(UITableViewCell *cell))withCell;
 - (DTTableRow * (^)(Class cla))withCellClass;
 
+- (DTTableRow * (^)(BOOL isXib))withIsXib;
+
 - (DTTableRow * (^)(CGFloat height))withHeight;
+
+- (DTTableRow * (^)(SEL method))withDataMethod;
+- (DTTableRow * (^)(BOOL autoSet))withAutoSetItem;
 
 //以下方法会转为section,建议row配置完成后才调用
 - (DTTableSection * (^)(DTTableSection *sectionItem))addToSection;

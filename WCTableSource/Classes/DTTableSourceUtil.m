@@ -77,6 +77,14 @@
     };
 }
 
+- (DTTableRow * (^)(BOOL isXib))withIsXib
+{
+    return ^(BOOL isXib) {
+        self.isXibCell = isXib;
+        return self;
+    };
+}
+
 - (DTTableRow * (^)(CGFloat height))withHeight
 {
     return ^(CGFloat height) {
@@ -115,6 +123,46 @@
         self.clickBlock = clickBlock;
         return self;
     };
+}
+
+- (DTTableRow * (^)(SEL method))withDataMethod
+{
+    return ^(SEL method) {
+        self.dataMethod = method;
+        return self;
+    };
+}
+
+- (DTTableRow * (^)(BOOL autoSet))withAutoSetItem
+{
+    return ^(BOOL autoSet) {
+        self.autoSetItem = autoSet;
+        return self;
+    };
+}
+
+- (DTTableRow *)withSetInitBlock:(CellConfig)initBlock
+{
+    self.initBlock = initBlock;
+    return self;
+}
+
+- (DTTableRow *)withSetConfigBlock:(CellConfig)configBlock
+{
+    self.configBlock = configBlock;
+    return self;
+}
+
+- (DTTableRow *)withSetHeightBlock:(CellHeight)heightBlock
+{
+    self.heightBlock = heightBlock;
+    return self;
+}
+
+- (DTTableRow *)withSetClickBlock:(CellClick)clickBlock
+{
+    self.clickBlock = clickBlock;
+    return self;
 }
 
 - (DTTableSection * (^)(DTTableSection *sectionItem))addToSection;
@@ -174,6 +222,7 @@
         return self;
     };
 }
+
 - (DTTableRowGroup * (^)(NSArray *heightList))withHeightList
 {
     return ^(NSArray *heightList) {

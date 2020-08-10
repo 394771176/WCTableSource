@@ -25,6 +25,20 @@
     return 0;
 }
 
++ (DTTableRow *)row
+{
+    return [self new];
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.autoSetItem = YES;
+    }
+    return self;
+}
+
 - (Class)cellClassForIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [self cellForIndexPath:indexPath];
@@ -75,8 +89,14 @@
         }
         cell = [tableView dequeueReusableCellWithIdentifier:self.reuseCellId];
         if (!cell) {
-            cell = [(UITableViewCell *)[_cellClass alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:self.reuseCellId];
-            if (self.initBlock) {
+            if (self.isXibCell) {
+                [tableView registerNib:[UINib nibWithNibName:self.reuseCellId bundle:nil] forCellReuseIdentifier:self.reuseCellId];
+                cell = [tableView dequeueReusableCellWithIdentifier:self.reuseCellId];
+            } else {
+                cell = [(UITableViewCell *)[self.cellClass alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:self.reuseCellId];
+            }
+            
+            if (cell && self.initBlock) {
                 self.initBlock(self, cell, indexPath);
             }
         }
@@ -96,12 +116,17 @@
         if (self.configBlock) {
             self.configBlock(self, cell, indexPath);
         }
-        if ([cell respondsToSelector:@selector(setItem:)]) {
+        
+        if (self.dataMethod) {
+            if ([cell respondsToSelector:self.dataMethod]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+                [cell performSelector:self.dataMethod withObject:self.data];
+#pragma clang diagnostic pop
+            }
+        } else if (self.autoSetItem && [cell respondsToSelector:@selector(setItem:)]) {
             //只是借助DTTableRow为替身，方便调setItem方法，而没有警告
             [(DTTableRow *)cell setItem:self.data];
-        }
-        if ([cell respondsToSelector:@selector(setUserInfo:)]) {
-            [(DTTableRow *)cell setUserInfo:self.userInfo];
         }
     }
 }
@@ -109,7 +134,8 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (self.clickBlock) {
-        self.clickBlock(self, self.currentCell, indexPath);
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        self.clickBlock(self, cell, indexPath);
     }
 }
 

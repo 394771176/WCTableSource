@@ -23,6 +23,11 @@
 
 @implementation DTTableSection
 
++ (DTTableSection *)section
+{
+    return [self new];
+}
+
 - (NSMutableArray<DTTableRow *> *)rowList
 {
     if (!_rowList) {
